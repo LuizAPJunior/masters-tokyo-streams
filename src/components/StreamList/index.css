@@ -1,0 +1,39 @@
+.streamList {
+    display: grid;
+    justify-content: center;
+    padding-inline: 16px;
+    padding-block: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 400px));
+    gap: 16px;
+}
+
+.link-title {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-title:hover {
+    text-decoration: underline;
+}
+
+.link-username {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-username p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.stream-usernameAndViews{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.stream-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
