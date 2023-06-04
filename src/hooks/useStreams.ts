@@ -23,11 +23,13 @@ const useStream = () => {
             'yhchen0411'    
         ]  
     
-        let apiURL = 'https://api.twitch.tv/helix/streams?first=100&user_login=valorant' 
+       // let apiURL = 'https://api.twitch.tv/helix/streams?first=100&user_login=valorant' 
         
-        for(const username of usernames){
-            apiURL += `&user_login=${username}`
-        }
+        const apiURL = 'https://api.twitch.tv/helix/streams' 
+
+        // for(const username of usernames){
+        //     apiURL += `&user_login=${username}`
+        // }
        
 
         fetch('https://id.twitch.tv/oauth2/validate',
