@@ -5,7 +5,8 @@ import StreamList from './components/StreamList'
 import useStream from './hooks/useStreams'
 
 function App() {
-
+   console.log(import.meta.env.VITE_TEST_PLS);
+   
   const streamsData = useStream()
   
   return (
