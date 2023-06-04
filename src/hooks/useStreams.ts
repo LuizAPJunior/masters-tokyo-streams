@@ -29,6 +29,22 @@ const useStream = () => {
             apiURL += `&user_login=${username}`
         }
        
+
+        fetch('https://id.twitch.tv/oauth2/validate',
+            {
+                method: 'GET',
+                headers: {
+                    Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`
+                     
+                }
+            })
+            .then( response => { 
+                if(response.ok){
+                    return response.json()
+                }
+            })
+            .then(data => console.log(data))
+
      
         fetch(apiURL,
         {
@@ -37,14 +53,12 @@ const useStream = () => {
                 Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`,
                 'Client-Id': `${import.meta.env.VITE_CLIENT_ID}` 
             }
-        }
-        )
+        })
         .then( response => { 
             if(response.ok){
                 return response.json()
             }
-        }
-        )
+        })
         .then(dataObj => {
             console.log(dataObj['data']);
             
